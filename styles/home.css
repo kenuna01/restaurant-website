@@ -1,0 +1,252 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 64px;
+    color: var(--black);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.feature-card h3 {
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+}
+
+/* Popular Dishes Section */
+.popular-dishes {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.popular-dishes h2 {
+    text-align: center;
+    margin-bottom: 64px;
+    color: var(--black);
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dish-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.dish-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 24px;
+}
+
+.dish-info h3 {
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.dish-info p {
+    color: var(--medium-gray);
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta .btn-primary {
+    background-color: var(--white);
+    color: var(--primary-red);
+    border: 2px solid var(--white);
+    font-weight: 700;
+}
+
+.cta .btn-primary:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 0 60px;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .dishes-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .features,
+    .popular-dishes,
+    .cta {
+        padding: 60px 0;
+    }
+    
+    .feature-card,
+    .dish-info {
+        padding: 24px 16px;
+    }
+}

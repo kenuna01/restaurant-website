@@ -1,0 +1,281 @@
+/* Contact Hero Section */
+.contact-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--tomato) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.contact-hero p {
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    margin-bottom: 0;
+}
+
+/* Contact Content */
+.contact-content {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form-section h2 {
+    color: var(--black);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    gap: 24px;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    display: grid;
+    gap: 32px;
+}
+
+.contact-info {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info h2 {
+    color: var(--black);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    background-color: #FEF2F2;
+    border-left: 4px solid var(--primary-red);
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.info-content h3 {
+    color: var(--primary-red);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.info-content p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Hours Section */
+.hours-section {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--light-gray);
+}
+
+.hours-section h3 {
+    color: var(--black);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.hours-list {
+    display: grid;
+    gap: 8px;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}
+
+.hours-item span:first-child {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.hours-item span:last-child {
+    color: var(--primary-red);
+    font-weight: 500;
+}
+
+/* Reservation Section */
+.reservation-section {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.reservation-section h3 {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.reservation-section p {
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.reservation-section a {
+    color: var(--tomato);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.reservation-section a:hover {
+    color: var(--primary-red);
+}
+
+/* Form Enhancements */
+.form-group {
+    position: relative;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.contact-form .btn {
+    justify-self: center;
+    min-width: 200px;
+    padding: 16px 32px;
+    font-size: 16px;
+}
+
+/* Success/Error Messages */
+.form-message {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: #D1FAE5;
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.form-message.error {
+    background-color: #FEE2E2;
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .contact-form-section {
+        padding: 32px 24px;
+    }
+    
+    .contact-info {
+        padding: 24px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-icon {
+        margin-top: 0;
+    }
+    
+    .hours-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+    
+    .reservation-section {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-content {
+        padding: 60px 0;
+    }
+    
+    .contact-form-section {
+        padding: 24px 16px;
+    }
+    
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .info-item {
+        padding: 12px;
+    }
+    
+    .contact-form .btn {
+        min-width: 160px;
+        padding: 12px 24px;
+    }
+}

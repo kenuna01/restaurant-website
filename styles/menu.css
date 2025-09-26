@@ -1,0 +1,237 @@
+/* Menu Hero Section */
+.menu-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.menu-hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.menu-hero p {
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    margin-bottom: 0;
+}
+
+/* Menu Categories Section */
+.menu-categories {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background-color: var(--primary-red);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid #E5E7EB;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--tomato);
+}
+
+.menu-item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    flex: 1;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.menu-item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+
+.menu-item-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-left: 16px;
+}
+
+.menu-item-description {
+    color: var(--medium-gray);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.menu-item-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.menu-tag {
+    padding: 4px 8px;
+    background-color: var(--light-gray);
+    color: var(--medium-gray);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.menu-tag.vegetarian {
+    background-color: #D1FAE5;
+    color: var(--success);
+}
+
+.menu-tag.spicy {
+    background-color: #FEE2E2;
+    color: var(--error);
+}
+
+.menu-tag.popular {
+    background-color: #FEF3C7;
+    color: var(--warning);
+}
+
+/* Loading and Empty States */
+.menu-loading {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--medium-gray);
+}
+
+.menu-empty {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--medium-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .menu-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .category-tabs {
+        gap: 8px;
+        margin-bottom: 40px;
+    }
+    
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-item-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .menu-item-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .menu-item-price {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-categories {
+        padding: 60px 0;
+    }
+    
+    .menu-item {
+        padding: 20px;
+    }
+    
+    .menu-item-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .category-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+}

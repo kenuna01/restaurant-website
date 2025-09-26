@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Menu - Bella Vista Restaurant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/build-menu.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="build-menu.html" class="nav-link active">Build Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="build-hero">
+            <div class="container">
+                <h1>Build Your Custom Menu</h1>
+                <p>Create a personalized dining experience by selecting your favorite dishes</p>
+            </div>
+        </section>
+
+        <section class="build-content">
+            <div class="container">
+                <div class="build-layout">
+                    <div class="menu-builder">
+                        <div class="builder-step">
+                            <h3>Step 1: Choose Your Courses</h3>
+                            <div class="course-selector">
+                                <div class="course-option">
+                                    <input type="checkbox" id="appetizer" name="courses" value="appetizer">
+                                    <label for="appetizer">Appetizer</label>
+                                </div>
+                                <div class="course-option">
+                                    <input type="checkbox" id="main" name="courses" value="main">
+                                    <label for="main">Main Course</label>
+                                </div>
+                                <div class="course-option">
+                                    <input type="checkbox" id="dessert" name="courses" value="dessert">
+                                    <label for="dessert">Dessert</label>
+                                </div>
+                                <div class="course-option">
+                                    <input type="checkbox" id="beverage" name="courses" value="beverage">
+                                    <label for="beverage">Beverage</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="builder-step">
+                            <h3>Step 2: Select Items for Each Course</h3>
+                            <div id="courseSelections" class="course-selections">
+                                <!-- Dynamic course selections will be added here -->
+                            </div>
+                        </div>
+
+                        <div class="builder-step">
+                            <h3>Step 3: Customize Your Menu</h3>
+                            <div class="customization-options">
+                                <div class="option-group">
+                                    <label for="menuName">Menu Name:</label>
+                                    <input type="text" id="menuName" placeholder="My Custom Menu" class="form-input">
+                                </div>
+                                <div class="option-group">
+                                    <label for="specialRequests">Special Requests:</label>
+                                    <textarea id="specialRequests" placeholder="Any dietary restrictions or special requests..." class="form-textarea"></textarea>
+                                </div>
+                                <div class="option-group">
+                                    <label for="servingSize">Number of People:</label>
+                                    <select id="servingSize" class="form-select">
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 People</option>
+                                        <option value="4">4 People</option>
+                                        <option value="6">6 People</option>
+                                        <option value="8">8 People</option>
+                                        <option value="10">10+ People</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-preview">
+                        <div class="preview-header">
+                            <h3>Menu Preview</h3>
+                            <span class="preview-price" id="previewPrice">$0.00</span>
+                        </div>
+                        
+                        <div class="preview-content" id="previewContent">
+                            <div class="preview-empty">
+                                <p>Select courses to see your menu preview</p>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <button class="btn btn-secondary" id="resetMenu">Reset Menu</button>
+                            <button class="btn btn-primary" id="saveMenu" disabled>Save Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Bringing authentic Italian flavors to your neighborhood since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Italian Street, Food City, FC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@bellavista.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/build-menu.js"></script>

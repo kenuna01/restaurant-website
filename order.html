@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Bella Vista Restaurant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/order.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link active">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="build-menu.html" class="nav-link">Build Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="order-hero">
+            <div class="container">
+                <h1>Place Your Order</h1>
+                <p>Choose from our delicious selection and have it delivered fresh to your door</p>
+            </div>
+        </section>
+
+        <section class="order-content">
+            <div class="container">
+                <div class="order-layout">
+                    <div class="order-menu">
+                        <div class="category-selector">
+                            <button class="category-btn active" data-category="all">All</button>
+                            <button class="category-btn" data-category="appetizers">Appetizers</button>
+                            <button class="category-btn" data-category="pasta">Pasta</button>
+                            <button class="category-btn" data-category="pizza">Pizza</button>
+                            <button class="category-btn" data-category="mains">Mains</button>
+                            <button class="category-btn" data-category="desserts">Desserts</button>
+                        </div>
+                        
+                        <div class="menu-items" id="orderMenuItems">
+                            <!-- Menu items will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="cart-section">
+                        <div class="cart-header">
+                            <h3>Your Order</h3>
+                            <span class="cart-count" id="cartCount">0 items</span>
+                        </div>
+                        
+                        <div class="cart-items" id="cartItems">
+                            <div class="empty-cart">
+                                <p>Your cart is empty</p>
+                                <p>Add some delicious items to get started!</p>
+                            </div>
+                        </div>
+
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <div class="total-line">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">$0.00</span>
+                                </div>
+                                <div class="total-line">
+                                    <span>Tax:</span>
+                                    <span id="tax">$0.00</span>
+                                </div>
+                                <div class="total-line total">
+                                    <span>Total:</span>
+                                    <span id="total">$0.00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary checkout-btn" id="checkoutBtn" disabled>
+                                Proceed to Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Bringing authentic Italian flavors to your neighborhood since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Italian Street, Food City, FC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@bellavista.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/order.js"></script>

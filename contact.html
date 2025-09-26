@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bella Vista Restaurant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Bella Vista</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="build-menu.html" class="nav-link">Build Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Get in touch for reservations, questions, or feedback</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-form-section">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required class="form-select">
+                                    <option value="">Select a subject</option>
+                                    <option value="reservation">Reservation</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="catering">Catering Inquiry</option>
+                                    <option value="general">General Question</option>
+                                    <option value="complaint">Complaint</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="contact-info">
+                            <h2>Visit Us</h2>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">📍</div>
+                                <div class="info-content">
+                                    <h3>Address</h3>
+                                    <p>123 Italian Street<br>Food City, FC 12345</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">📞</div>
+                                <div class="info-content">
+                                    <h3>Phone</h3>
+                                    <p>(555) 123-4567</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">✉️</div>
+                                <div class="info-content">
+                                    <h3>Email</h3>
+                                    <p>info@bellavista.com</p>
+                                </div>
+                            </div>
+
+                            <div class="hours-section">
+                                <h3>Operating Hours</h3>
+                                <div class="hours-list">
+                                    <div class="hours-item">
+                                        <span>Monday - Thursday</span>
+                                        <span>11:00 AM - 10:00 PM</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span>Friday - Saturday</span>
+                                        <span>11:00 AM - 11:00 PM</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span>Sunday</span>
+                                        <span>12:00 PM - 9:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reservation-section">
+                            <h3>Make a Reservation</h3>
+                            <p>For immediate reservations, please call us at <a href="tel:5551234567">(555) 123-4567</a></p>
+                            <button class="btn btn-secondary">Call Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Bringing authentic Italian flavors to your neighborhood since 1985.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Italian Street, Food City, FC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@bellavista.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Vista Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/contact.js"></script>
