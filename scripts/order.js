@@ -321,8 +321,42 @@ if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
         if (cart.length === 0) return;
 
-        // In a real app, this would integrate with a payment processor
-        alert(`Thank you for your order!\n\nTotal: ${totalElement.textContent}\n\nYour order will be ready in 25-30 minutes.`);
+        // Check if user is logged in
+        if (!auth.isLoggedIn()) {
+            if (confirm('You need to be logged in to place an order. Would you like to login now?')) {
+                window.location.href = '/login.html';
+            }
+            return;
+        }
+
+        // Create order data
+        const currentUser = auth.getCurrentUser();
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const tax = subtotal * TAX_RATE;
+        const total = subtotal + tax;
+
+        const orderData = {
+            customerId: currentUser.id,
+            customerName: currentUser.name,
+            customerEmail: currentUser.email,
+            items: cart.map(item => ({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                quantity: item.quantity
+            })),
+            subtotal: subtotal,
+            tax: tax,
+            total: total,
+            status: 'pending',
+            notes: ''
+        };
+
+        // Add order to admin system
+        const newOrder = adminDashboard.addOrder(orderData);
+        
+        // Show success message
+        alert(`Thank you for your order!\n\nOrder ID: ${newOrder.id}\nTotal: $${total.toFixed(2)}\n\nYour order will be ready in 25-30 minutes.`);
         
         // Clear cart
         cart = [];

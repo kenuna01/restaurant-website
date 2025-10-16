@@ -395,3 +395,47 @@ p {
 .mt-32 {
     margin-top: 32px;
 }
+
+/* User Menu Styles */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-name {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.auth-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 14px;
+    min-width: auto;
+}
+
+/* Form Message Styles */
+.form-message {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: #D1FAE5;
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.form-message.error {
+    background-color: #FEE2E2;
+    color: var(--error);
+    border: 1px solid var(--error);
+}

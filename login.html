@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bella Vista Restaurant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Bella Vista</h1>
+                <p>Welcome back! Please sign in to your account.</p>
+            </div>
+            
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+                <p><a href="index.html">← Back to Restaurant</a></p>
+            </div>
+            
+            <div class="demo-credentials">
+                <h4>Demo Credentials:</h4>
+                <p><strong>Admin:</strong> admin@bellavista.com / admin123</p>
+                <p><strong>Customer:</strong> customer@example.com / customer123</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/auth.js"></script>
+</body>
+</html>
